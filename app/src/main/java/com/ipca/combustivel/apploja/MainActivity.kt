@@ -1,14 +1,12 @@
 package com.ipca.combustivel.apploja
 
-import android.app.Activity.RESULT_OK
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.ipca.combustivel.apploja.MainActivity.ProdutoAdapter.Companion.REQUEST_CODE_ADD_PRODUTO
-import java.text.FieldPosition
+
 
 class MainActivity : AppCompatActivity()
 {
@@ -112,11 +110,10 @@ class MainActivity : AppCompatActivity()
             return rootView
 
         }
+    }
 
-
-        companion object{
-            const val REQUEST_CODE_ADD_PRODUTO = 1001}
-
+    companion object{
+        const val REQUEST_CODE_ADD_PRODUTO = 1001
     }
 
 }
