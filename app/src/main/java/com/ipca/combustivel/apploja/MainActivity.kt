@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 import com.ipca.combustivel.apploja.MainActivity.ProdutoAdapter.Companion.REQUEST_CODE_ADD_PRODUTO
 import java.text.FieldPosition
 
@@ -113,9 +114,9 @@ class MainActivity : AppCompatActivity()
 
         }
 
-
         companion object{
-            const val REQUEST_CODE_ADD_PRODUTO = 1001}
+            const val REQUEST_CODE_ADD_PRODUTO = 1001
+        }
 
     }
 
