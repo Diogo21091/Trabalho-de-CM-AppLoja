@@ -10,9 +10,10 @@ import android.widget.*
 
 class MainActivity : AppCompatActivity()
 {
+
     var produtos = arrayListOf(
-        Produto("marca1", "serie1", "preço1", "descriçao1", "stock1", R.mipmap.jogo1),
-        Produto("marca2", "serie2", "preço2", "descriçao2", "stock2", R.mipmap.jogo2),
+        //Produto("marca1", "serie1", "preço1", "descriçao1", "stock1", R.mipmap.jogo1),
+        //Produto("marca2", "serie2", "preço2", "descriçao2", "stock2", R.mipmap.jogo2),
         Produto("marca3", "serie3", "preço3", "descriçao3", "stock3", R.mipmap.jogo3)
     )
 
@@ -35,6 +36,19 @@ class MainActivity : AppCompatActivity()
 
         }
 
+
+
+   // listviewProduto.setOnLongClickListener(new AdapterView.onItemLongClickListener(){
+   //     @Override
+   //     public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l){
+   //         makeToast( "Removed: " + produtos.get(i))
+   //         removeItem
+   //         return false;
+   //     }
+   // });
+
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
@@ -47,7 +61,7 @@ class MainActivity : AppCompatActivity()
                 val serie = it.getStringExtra("produto_serie")?:""
                 val preço = it.getStringExtra("produto_preço")?:""
                 val descriçao = it.getStringExtra("produto_descriçao")?:""
-                val stock = it.getStringExtra("produto_Stock")?:""
+                val stock = it.getStringExtra("produto_stock")?:""
 
 
 
@@ -86,6 +100,8 @@ class MainActivity : AppCompatActivity()
             val textViewProdutoStock = rootView.findViewById<TextView>(R.id.textViewProdutoStock)
             val imageViewPhoto = rootView.findViewById<ImageView>(R.id.imageViewPhoto)
 
+
+
             textViewProdutoMarca.text = produtos[position].marca
             textViewProdutoSerie.text = produtos[position].serie
             textViewProdutoPreço.text = produtos[position].preço
@@ -110,6 +126,7 @@ class MainActivity : AppCompatActivity()
             return rootView
 
         }
+
     }
 
     companion object{
